@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <script src=" https://cdn.jsdelivr.net/npm/ytdl-core-info-browser@1.0.4/dist/ytdl.min.js "></script>
+  <script src="index.js" defer></script>
+  <title>Youtube download</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Youtube download</h1>
+  <main>
+    <form onsubmit="return download(event)">
+      <label>
+        <input
+          name="link"
+          placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          type="url"
+          pattern="https?://.+"
+          title="Youtube video link"
+          required
+        />
+      </label>
+      <label>
+        <input type="radio" name="media" value="video" />
+        Video
+      </label>
+      <label>
+        <input type="radio" name="media" value="audio" />
+        Audio
+      </label>
+      <button type="submit">Download</button>
+    </form>
+  </main>
+</body>
